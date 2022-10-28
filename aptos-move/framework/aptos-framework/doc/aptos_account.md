@@ -20,6 +20,24 @@
 
 
 
+<details>
+<summary>Show all the modules that "aptos_account" depends on directly or indirectly</summary>
+
+
+![](img/aptos_account_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "aptos_account" directly or indirectly</summary>
+
+
+![](img/aptos_account_backward_dep.svg)
+
+
+</details>
+
 <a name="@Constants_0"></a>
 
 ## Constants
@@ -71,6 +89,24 @@ Basic account creation methods.
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_account" calls</summary>
+
+
+![](img/aptos_account_create_account_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_account"</summary>
+
+
+![](img/aptos_account_create_account_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_aptos_account_transfer"></a>
 
 ## Function `transfer`
@@ -94,6 +130,24 @@ Basic account creation methods.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "transfer" calls</summary>
+
+
+![](img/aptos_account_transfer_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "transfer"</summary>
+
+
+![](img/aptos_account_transfer_backward_call_graph.svg)
 
 
 </details>
@@ -122,6 +176,24 @@ Basic account creation methods.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_account_exists" calls</summary>
+
+
+![](img/aptos_account_assert_account_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_account_exists"</summary>
+
+
+![](img/aptos_account_assert_account_exists_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_aptos_account_assert_account_is_registered_for_apt"></a>
 
 ## Function `assert_account_is_registered_for_apt`
@@ -143,6 +215,24 @@ Basic account creation methods.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_account_is_registered_for_apt" calls</summary>
+
+
+![](img/aptos_account_assert_account_is_registered_for_apt_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_account_is_registered_for_apt"</summary>
+
+
+![](img/aptos_account_assert_account_is_registered_for_apt_backward_call_graph.svg)
 
 
 </details>

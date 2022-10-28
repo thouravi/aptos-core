@@ -33,6 +33,24 @@ modified from https://github.com/move-language/move/tree/main/language/documenta
 
 
 
+<details>
+<summary>Show all the modules that "aptos_coin" depends on directly or indirectly</summary>
+
+
+![](img/aptos_coin_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "aptos_coin" directly or indirectly</summary>
+
+
+![](img/aptos_coin_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_aptos_coin_AptosCoin"></a>
 
 ## Resource `AptosCoin`
@@ -218,6 +236,24 @@ Can only called during genesis to initialize the Aptos coin.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/aptos_coin_initialize_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize"</summary>
+
+
+![](img/aptos_coin_initialize_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_aptos_coin_has_mint_capability"></a>
 
 ## Function `has_mint_capability`
@@ -238,6 +274,24 @@ Can only called during genesis to initialize the Aptos coin.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_mint_capability" calls</summary>
+
+
+![](img/aptos_coin_has_mint_capability_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "has_mint_capability"</summary>
+
+
+![](img/aptos_coin_has_mint_capability_backward_call_graph.svg)
 
 
 </details>
@@ -266,6 +320,24 @@ and accounts have been initialized during genesis.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "destroy_mint_cap" calls</summary>
+
+
+![](img/aptos_coin_destroy_mint_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "destroy_mint_cap"</summary>
+
+
+![](img/aptos_coin_destroy_mint_cap_backward_call_graph.svg)
 
 
 </details>
@@ -311,6 +383,24 @@ accounts.
 
 </details>
 
+<details>
+<summary>Show all the functions that "configure_accounts_for_test" calls</summary>
+
+
+![](img/aptos_coin_configure_accounts_for_test_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "configure_accounts_for_test"</summary>
+
+
+![](img/aptos_coin_configure_accounts_for_test_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_aptos_coin_mint"></a>
 
 ## Function `mint`
@@ -350,6 +440,24 @@ Create new coins and deposit them into dst_addr's account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "mint" calls</summary>
+
+
+![](img/aptos_coin_mint_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mint"</summary>
+
+
+![](img/aptos_coin_mint_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_aptos_coin_delegate_mint_capability"></a>
 
 ## Function `delegate_mint_capability`
@@ -380,6 +488,24 @@ Create delegated token for the address so the account could claim MintCapability
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "delegate_mint_capability" calls</summary>
+
+
+![](img/aptos_coin_delegate_mint_capability_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "delegate_mint_capability"</summary>
+
+
+![](img/aptos_coin_delegate_mint_capability_backward_call_graph.svg)
 
 
 </details>
@@ -418,6 +544,24 @@ Claim the delegated mint capability and destroy the delegated token.
 
 </details>
 
+<details>
+<summary>Show all the functions that "claim_mint_capability" calls</summary>
+
+
+![](img/aptos_coin_claim_mint_capability_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "claim_mint_capability"</summary>
+
+
+![](img/aptos_coin_claim_mint_capability_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_aptos_coin_find_delegation"></a>
 
 ## Function `find_delegation`
@@ -450,6 +594,24 @@ Claim the delegated mint capability and destroy the delegated token.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "find_delegation" calls</summary>
+
+
+![](img/aptos_coin_find_delegation_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "find_delegation"</summary>
+
+
+![](img/aptos_coin_find_delegation_backward_call_graph.svg)
 
 
 </details>

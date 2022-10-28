@@ -17,6 +17,24 @@
 
 
 
+<details>
+<summary>Show all the modules that "transaction_fee" depends on directly or indirectly</summary>
+
+
+![](img/transaction_fee_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "transaction_fee" directly or indirectly</summary>
+
+
+![](img/transaction_fee_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_transaction_fee_AptosCoinCapabilities"></a>
 
 ## Resource `AptosCoinCapabilities`
@@ -73,6 +91,24 @@ Burn transaction fees in epilogue.
 
 </details>
 
+<details>
+<summary>Show all the functions that "burn_fee" calls</summary>
+
+
+![](img/transaction_fee_burn_fee_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "burn_fee"</summary>
+
+
+![](img/transaction_fee_burn_fee_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_transaction_fee_store_aptos_coin_burn_cap"></a>
 
 ## Function `store_aptos_coin_burn_cap`
@@ -95,6 +131,24 @@ Only called during genesis.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "store_aptos_coin_burn_cap" calls</summary>
+
+
+![](img/transaction_fee_store_aptos_coin_burn_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "store_aptos_coin_burn_cap"</summary>
+
+
+![](img/transaction_fee_store_aptos_coin_burn_cap_backward_call_graph.svg)
 
 
 </details>

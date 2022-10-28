@@ -26,6 +26,24 @@ which reflect that the system has been successfully initialized.
 
 
 
+<details>
+<summary>Show all the modules that "chain_status" depends on directly or indirectly</summary>
+
+
+![](img/chain_status_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "chain_status" directly or indirectly</summary>
+
+
+![](img/chain_status_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_chain_status_GenesisEndMarker"></a>
 
 ## Resource `GenesisEndMarker`
@@ -105,6 +123,24 @@ Marks that genesis has finished.
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_genesis_end" calls</summary>
+
+
+![](img/chain_status_set_genesis_end_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "set_genesis_end"</summary>
+
+
+![](img/chain_status_set_genesis_end_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_chain_status_is_genesis"></a>
 
 ## Function `is_genesis`
@@ -126,6 +162,24 @@ Helper function to determine if Aptos is in genesis state.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_genesis" calls</summary>
+
+
+![](img/chain_status_is_genesis_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_genesis"</summary>
+
+
+![](img/chain_status_is_genesis_backward_call_graph.svg)
 
 
 </details>
@@ -157,6 +211,24 @@ Testing <code><a href="chain_status.md#0x1_chain_status_is_operating">is_operati
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_operating" calls</summary>
+
+
+![](img/chain_status_is_operating_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_operating"</summary>
+
+
+![](img/chain_status_is_operating_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_chain_status_assert_operating"></a>
 
 ## Function `assert_operating`
@@ -182,6 +254,24 @@ Helper function to assert operating (not genesis) state.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_operating" calls</summary>
+
+
+![](img/chain_status_assert_operating_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_operating"</summary>
+
+
+![](img/chain_status_assert_operating_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_chain_status_assert_genesis"></a>
 
 ## Function `assert_genesis`
@@ -203,6 +293,24 @@ Helper function to assert genesis state.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_genesis" calls</summary>
+
+
+![](img/chain_status_assert_genesis_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_genesis"</summary>
+
+
+![](img/chain_status_assert_genesis_backward_call_graph.svg)
 
 
 </details>

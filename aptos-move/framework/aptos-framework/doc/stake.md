@@ -134,6 +134,24 @@
 
 
 
+<details>
+<summary>Show all the modules that "stake" depends on directly or indirectly</summary>
+
+
+![](img/stake_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "stake" directly or indirectly</summary>
+
+
+![](img/stake_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_stake_OwnerCapability"></a>
 
 ## Resource `OwnerCapability`
@@ -1260,6 +1278,24 @@ This will throw an error if there's no stake pool at <code>pool_address</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_lockup_secs" calls</summary>
+
+
+![](img/stake_get_lockup_secs_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_lockup_secs"</summary>
+
+
+![](img/stake_get_lockup_secs_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_get_remaining_lockup_secs"></a>
 
 ## Function `get_remaining_lockup_secs`
@@ -1288,6 +1324,24 @@ This will throw an error if there's no stake pool at <code>pool_address</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_remaining_lockup_secs" calls</summary>
+
+
+![](img/stake_get_remaining_lockup_secs_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_remaining_lockup_secs"</summary>
+
+
+![](img/stake_get_remaining_lockup_secs_backward_call_graph.svg)
 
 
 </details>
@@ -1325,6 +1379,24 @@ The returned amounts are for (active, inactive, pending_active, pending_inactive
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_stake" calls</summary>
+
+
+![](img/stake_get_stake_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_stake"</summary>
+
+
+![](img/stake_get_stake_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_get_validator_state"></a>
 
 ## Function `get_validator_state`
@@ -1355,6 +1427,24 @@ Returns the validator's state.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_validator_state" calls</summary>
+
+
+![](img/stake_get_validator_state_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_validator_state"</summary>
+
+
+![](img/stake_get_validator_state_backward_call_graph.svg)
 
 
 </details>
@@ -1394,6 +1484,24 @@ This is the same as the validator's total active and pending_inactive stake.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_current_epoch_voting_power" calls</summary>
+
+
+![](img/stake_get_current_epoch_voting_power_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_current_epoch_voting_power"</summary>
+
+
+![](img/stake_get_current_epoch_voting_power_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_get_delegated_voter"></a>
 
 ## Function `get_delegated_voter`
@@ -1416,6 +1524,24 @@ Return the delegated voter of the validator at <code>pool_address</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_delegated_voter" calls</summary>
+
+
+![](img/stake_get_delegated_voter_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_delegated_voter"</summary>
+
+
+![](img/stake_get_delegated_voter_backward_call_graph.svg)
 
 
 </details>
@@ -1446,6 +1572,24 @@ Return the operator of the validator at <code>pool_address</code>.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_operator" calls</summary>
+
+
+![](img/stake_get_operator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_operator"</summary>
+
+
+![](img/stake_get_operator_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_get_owned_pool_address"></a>
 
 ## Function `get_owned_pool_address`
@@ -1467,6 +1611,24 @@ Return the pool address in <code>owner_cap</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_owned_pool_address" calls</summary>
+
+
+![](img/stake_get_owned_pool_address_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_owned_pool_address"</summary>
+
+
+![](img/stake_get_owned_pool_address_backward_call_graph.svg)
 
 
 </details>
@@ -1493,6 +1655,24 @@ Return the validator index for <code>pool_address</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_validator_index" calls</summary>
+
+
+![](img/stake_get_validator_index_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_validator_index"</summary>
+
+
+![](img/stake_get_validator_index_backward_call_graph.svg)
 
 
 </details>
@@ -1524,6 +1704,24 @@ Return the number of successful and failed proposals for the proposal at the giv
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_current_epoch_proposal_counts" calls</summary>
+
+
+![](img/stake_get_current_epoch_proposal_counts_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_current_epoch_proposal_counts"</summary>
+
+
+![](img/stake_get_current_epoch_proposal_counts_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_get_validator_config"></a>
 
 ## Function `get_validator_config`
@@ -1551,6 +1749,24 @@ Return the validator's config.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_validator_config" calls</summary>
+
+
+![](img/stake_get_validator_config_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_validator_config"</summary>
+
+
+![](img/stake_get_validator_config_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_stake_pool_exists"></a>
 
 ## Function `stake_pool_exists`
@@ -1571,6 +1787,24 @@ Return the validator's config.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "stake_pool_exists" calls</summary>
+
+
+![](img/stake_stake_pool_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "stake_pool_exists"</summary>
+
+
+![](img/stake_stake_pool_exists_backward_call_graph.svg)
 
 
 </details>
@@ -1613,6 +1847,24 @@ Initialize validator set to the core resource account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/stake_initialize_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize"</summary>
+
+
+![](img/stake_initialize_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_store_aptos_coin_mint_cap"></a>
 
 ## Function `store_aptos_coin_mint_cap`
@@ -1636,6 +1888,24 @@ Beyond genesis, no one can create AptosCoin mint/burn capabilities.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "store_aptos_coin_mint_cap" calls</summary>
+
+
+![](img/stake_store_aptos_coin_mint_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "store_aptos_coin_mint_cap"</summary>
+
+
+![](img/stake_store_aptos_coin_mint_cap_backward_call_graph.svg)
 
 
 </details>
@@ -1692,6 +1962,24 @@ Allow on chain governance to remove validators from the validator set.
 
 </details>
 
+<details>
+<summary>Show all the functions that "remove_validators" calls</summary>
+
+
+![](img/stake_remove_validators_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "remove_validators"</summary>
+
+
+![](img/stake_remove_validators_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_initialize_stake_owner"></a>
 
 ## Function `initialize_stake_owner`
@@ -1743,6 +2031,24 @@ to set later.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize_stake_owner" calls</summary>
+
+
+![](img/stake_initialize_stake_owner_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize_stake_owner"</summary>
+
+
+![](img/stake_initialize_stake_owner_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_initialize_validator"></a>
 
 ## Function `initialize_validator`
@@ -1783,6 +2089,24 @@ Initialize the validator account and give ownership to the signing account.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "initialize_validator" calls</summary>
+
+
+![](img/stake_initialize_validator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize_validator"</summary>
+
+
+![](img/stake_initialize_validator_backward_call_graph.svg)
 
 
 </details>
@@ -1838,6 +2162,24 @@ Initialize the validator account and give ownership to the signing account.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize_owner" calls</summary>
+
+
+![](img/stake_initialize_owner_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize_owner"</summary>
+
+
+![](img/stake_initialize_owner_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_extract_owner_cap"></a>
 
 ## Function `extract_owner_cap`
@@ -1861,6 +2203,24 @@ Extract and return owner capability from the signing account.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "extract_owner_cap" calls</summary>
+
+
+![](img/stake_extract_owner_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "extract_owner_cap"</summary>
+
+
+![](img/stake_extract_owner_cap_backward_call_graph.svg)
 
 
 </details>
@@ -1892,6 +2252,24 @@ staking pool.
 
 </details>
 
+<details>
+<summary>Show all the functions that "deposit_owner_cap" calls</summary>
+
+
+![](img/stake_deposit_owner_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "deposit_owner_cap"</summary>
+
+
+![](img/stake_deposit_owner_cap_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_destroy_owner_cap"></a>
 
 ## Function `destroy_owner_cap`
@@ -1913,6 +2291,24 @@ Destroy <code>owner_cap</code>.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "destroy_owner_cap" calls</summary>
+
+
+![](img/stake_destroy_owner_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "destroy_owner_cap"</summary>
+
+
+![](img/stake_destroy_owner_cap_backward_call_graph.svg)
 
 
 </details>
@@ -1941,6 +2337,24 @@ Allows an owner to change the operator of the stake pool.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_operator" calls</summary>
+
+
+![](img/stake_set_operator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "set_operator"</summary>
+
+
+![](img/stake_set_operator_backward_call_graph.svg)
 
 
 </details>
@@ -1983,6 +2397,24 @@ Allows an account with ownership capability to change the operator of the stake 
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_operator_with_cap" calls</summary>
+
+
+![](img/stake_set_operator_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "set_operator_with_cap"</summary>
+
+
+![](img/stake_set_operator_with_cap_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_set_delegated_voter"></a>
 
 ## Function `set_delegated_voter`
@@ -2007,6 +2439,24 @@ Allows an owner to change the delegated voter of the stake pool.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_delegated_voter" calls</summary>
+
+
+![](img/stake_set_delegated_voter_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "set_delegated_voter"</summary>
+
+
+![](img/stake_set_delegated_voter_backward_call_graph.svg)
 
 
 </details>
@@ -2039,6 +2489,24 @@ Allows an owner to change the delegated voter of the stake pool.
 
 </details>
 
+<details>
+<summary>Show all the functions that "set_delegated_voter_with_cap" calls</summary>
+
+
+![](img/stake_set_delegated_voter_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "set_delegated_voter_with_cap"</summary>
+
+
+![](img/stake_set_delegated_voter_with_cap_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_add_stake"></a>
 
 ## Function `add_stake`
@@ -2063,6 +2531,24 @@ Add <code>amount</code> of coins from the <code><a href="account.md#0x1_account"
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "add_stake" calls</summary>
+
+
+![](img/stake_add_stake_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "add_stake"</summary>
+
+
+![](img/stake_add_stake_backward_call_graph.svg)
 
 
 </details>
@@ -2130,6 +2616,24 @@ Add <code>coins</code> into <code>pool_address</code>. this requires the corresp
 
 </details>
 
+<details>
+<summary>Show all the functions that "add_stake_with_cap" calls</summary>
+
+
+![](img/stake_add_stake_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "add_stake_with_cap"</summary>
+
+
+![](img/stake_add_stake_with_cap_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_reactivate_stake"></a>
 
 ## Function `reactivate_stake`
@@ -2154,6 +2658,24 @@ Move <code>amount</code> of coins from pending_inactive to active.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "reactivate_stake" calls</summary>
+
+
+![](img/stake_reactivate_stake_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "reactivate_stake"</summary>
+
+
+![](img/stake_reactivate_stake_backward_call_graph.svg)
 
 
 </details>
@@ -2198,6 +2720,24 @@ Move <code>amount</code> of coins from pending_inactive to active.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "reactivate_stake_with_cap" calls</summary>
+
+
+![](img/stake_reactivate_stake_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "reactivate_stake_with_cap"</summary>
+
+
+![](img/stake_reactivate_stake_with_cap_backward_call_graph.svg)
 
 
 </details>
@@ -2254,6 +2794,24 @@ Rotate the consensus key of the validator, it'll take effect in next epoch.
 
 </details>
 
+<details>
+<summary>Show all the functions that "rotate_consensus_key" calls</summary>
+
+
+![](img/stake_rotate_consensus_key_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "rotate_consensus_key"</summary>
+
+
+![](img/stake_rotate_consensus_key_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_update_network_and_fullnode_addresses"></a>
 
 ## Function `update_network_and_fullnode_addresses`
@@ -2304,6 +2862,24 @@ Update the network and full node addresses of the validator. This only takes eff
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_network_and_fullnode_addresses" calls</summary>
+
+
+![](img/stake_update_network_and_fullnode_addresses_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "update_network_and_fullnode_addresses"</summary>
+
+
+![](img/stake_update_network_and_fullnode_addresses_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_increase_lockup"></a>
 
 ## Function `increase_lockup`
@@ -2328,6 +2904,24 @@ Similar to increase_lockup_with_cap but will use ownership capability from the s
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "increase_lockup" calls</summary>
+
+
+![](img/stake_increase_lockup_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "increase_lockup"</summary>
+
+
+![](img/stake_increase_lockup_backward_call_graph.svg)
 
 
 </details>
@@ -2375,6 +2969,24 @@ directly inactive if it's not from an active validator.
 
 </details>
 
+<details>
+<summary>Show all the functions that "increase_lockup_with_cap" calls</summary>
+
+
+![](img/stake_increase_lockup_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "increase_lockup_with_cap"</summary>
+
+
+![](img/stake_increase_lockup_with_cap_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_join_validator_set"></a>
 
 ## Function `join_validator_set`
@@ -2404,6 +3016,24 @@ This can only called by the operator of the validator/staking pool.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "join_validator_set" calls</summary>
+
+
+![](img/stake_join_validator_set_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "join_validator_set"</summary>
+
+
+![](img/stake_join_validator_set_backward_call_graph.svg)
 
 
 </details>
@@ -2471,6 +3101,24 @@ This internal version can only be called by the Genesis module during Genesis.
 
 </details>
 
+<details>
+<summary>Show all the functions that "join_validator_set_internal" calls</summary>
+
+
+![](img/stake_join_validator_set_internal_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "join_validator_set_internal"</summary>
+
+
+![](img/stake_join_validator_set_internal_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_unlock"></a>
 
 ## Function `unlock`
@@ -2495,6 +3143,24 @@ Similar to unlock_with_cap but will use ownership capability from the signing ac
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "unlock" calls</summary>
+
+
+![](img/stake_unlock_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "unlock"</summary>
+
+
+![](img/stake_unlock_backward_call_graph.svg)
 
 
 </details>
@@ -2545,6 +3211,24 @@ Unlock <code>amount</code> from the active stake. Only possible if the lockup ha
 
 </details>
 
+<details>
+<summary>Show all the functions that "unlock_with_cap" calls</summary>
+
+
+![](img/stake_unlock_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "unlock_with_cap"</summary>
+
+
+![](img/stake_unlock_with_cap_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_withdraw"></a>
 
 ## Function `withdraw`
@@ -2573,6 +3257,24 @@ Withdraw from <code><a href="account.md#0x1_account">account</a></code>'s inacti
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "withdraw" calls</summary>
+
+
+![](img/stake_withdraw_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "withdraw"</summary>
+
+
+![](img/stake_withdraw_backward_call_graph.svg)
 
 
 </details>
@@ -2625,6 +3327,24 @@ Withdraw from <code>pool_address</code>'s inactive stake with the corresponding 
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "withdraw_with_cap" calls</summary>
+
+
+![](img/stake_withdraw_with_cap_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "withdraw_with_cap"</summary>
+
+
+![](img/stake_withdraw_with_cap_backward_call_graph.svg)
 
 
 </details>
@@ -2707,6 +3427,24 @@ Can only be called by the operator of the validator/staking pool.
 
 </details>
 
+<details>
+<summary>Show all the functions that "leave_validator_set" calls</summary>
+
+
+![](img/stake_leave_validator_set_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "leave_validator_set"</summary>
+
+
+![](img/stake_leave_validator_set_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_is_current_epoch_validator"></a>
 
 ## Function `is_current_epoch_validator`
@@ -2732,6 +3470,24 @@ when the epoch starts.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_current_epoch_validator" calls</summary>
+
+
+![](img/stake_is_current_epoch_validator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_current_epoch_validator"</summary>
+
+
+![](img/stake_is_current_epoch_validator_backward_call_graph.svg)
 
 
 </details>
@@ -2794,6 +3550,24 @@ This function cannot abort.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_performance_statistics" calls</summary>
+
+
+![](img/stake_update_performance_statistics_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "update_performance_statistics"</summary>
+
+
+![](img/stake_update_performance_statistics_backward_call_graph.svg)
 
 
 </details>
@@ -2936,6 +3710,24 @@ power.
 
 </details>
 
+<details>
+<summary>Show all the functions that "on_new_epoch" calls</summary>
+
+
+![](img/stake_on_new_epoch_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "on_new_epoch"</summary>
+
+
+![](img/stake_on_new_epoch_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_update_stake_pool"></a>
 
 ## Function `update_stake_pool`
@@ -3016,6 +3808,24 @@ This function shouldn't abort.
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_stake_pool" calls</summary>
+
+
+![](img/stake_update_stake_pool_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "update_stake_pool"</summary>
+
+
+![](img/stake_update_stake_pool_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_calculate_rewards_amount"></a>
 
 ## Function `calculate_rewards_amount`
@@ -3062,6 +3872,24 @@ Calculate the rewards amount.
 
 </details>
 
+<details>
+<summary>Show all the functions that "calculate_rewards_amount" calls</summary>
+
+
+![](img/stake_calculate_rewards_amount_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "calculate_rewards_amount"</summary>
+
+
+![](img/stake_calculate_rewards_amount_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_distribute_rewards"></a>
 
 ## Function `distribute_rewards`
@@ -3104,6 +3932,24 @@ Mint rewards corresponding to current epoch's <code><a href="stake.md#0x1_stake"
 
 </details>
 
+<details>
+<summary>Show all the functions that "distribute_rewards" calls</summary>
+
+
+![](img/stake_distribute_rewards_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "distribute_rewards"</summary>
+
+
+![](img/stake_distribute_rewards_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_append"></a>
 
 ## Function `append`
@@ -3126,6 +3972,24 @@ Mint rewards corresponding to current epoch's <code><a href="stake.md#0x1_stake"
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "append" calls</summary>
+
+
+![](img/stake_append_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "append"</summary>
+
+
+![](img/stake_append_backward_call_graph.svg)
 
 
 </details>
@@ -3167,6 +4031,24 @@ Mint rewards corresponding to current epoch's <code><a href="stake.md#0x1_stake"
 
 </details>
 
+<details>
+<summary>Show all the functions that "find_validator" calls</summary>
+
+
+![](img/stake_find_validator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "find_validator"</summary>
+
+
+![](img/stake_find_validator_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_generate_validator_info"></a>
 
 ## Function `generate_validator_info`
@@ -3192,6 +4074,24 @@ Mint rewards corresponding to current epoch's <code><a href="stake.md#0x1_stake"
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "generate_validator_info" calls</summary>
+
+
+![](img/stake_generate_validator_info_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "generate_validator_info"</summary>
+
+
+![](img/stake_generate_validator_info_backward_call_graph.svg)
 
 
 </details>
@@ -3223,6 +4123,24 @@ Returns validator's next epoch voting power, including pending_active, active, a
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_next_epoch_voting_power" calls</summary>
+
+
+![](img/stake_get_next_epoch_voting_power_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_next_epoch_voting_power"</summary>
+
+
+![](img/stake_get_next_epoch_voting_power_backward_call_graph.svg)
 
 
 </details>
@@ -3262,6 +4180,24 @@ Returns validator's next epoch voting power, including pending_active, active, a
 
 </details>
 
+<details>
+<summary>Show all the functions that "update_voting_power_increase" calls</summary>
+
+
+![](img/stake_update_voting_power_increase_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "update_voting_power_increase"</summary>
+
+
+![](img/stake_update_voting_power_increase_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_assert_stake_pool_exists"></a>
 
 ## Function `assert_stake_pool_exists`
@@ -3282,6 +4218,24 @@ Returns validator's next epoch voting power, including pending_active, active, a
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_stake_pool_exists" calls</summary>
+
+
+![](img/stake_assert_stake_pool_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_stake_pool_exists"</summary>
+
+
+![](img/stake_assert_stake_pool_exists_backward_call_graph.svg)
 
 
 </details>
@@ -3317,6 +4271,24 @@ Returns validator's next epoch voting power, including pending_active, active, a
 
 </details>
 
+<details>
+<summary>Show all the functions that "configure_allowed_validators" calls</summary>
+
+
+![](img/stake_configure_allowed_validators_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "configure_allowed_validators"</summary>
+
+
+![](img/stake_configure_allowed_validators_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_is_allowed"></a>
 
 ## Function `is_allowed`
@@ -3346,6 +4318,24 @@ Returns validator's next epoch voting power, including pending_active, active, a
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_allowed" calls</summary>
+
+
+![](img/stake_is_allowed_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_allowed"</summary>
+
+
+![](img/stake_is_allowed_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_stake_assert_owner_cap_exists"></a>
 
 ## Function `assert_owner_cap_exists`
@@ -3366,6 +4356,24 @@ Returns validator's next epoch voting power, including pending_active, active, a
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_owner_cap_exists" calls</summary>
+
+
+![](img/stake_assert_owner_cap_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_owner_cap_exists"</summary>
+
+
+![](img/stake_assert_owner_cap_exists_backward_call_graph.svg)
 
 
 </details>

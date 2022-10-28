@@ -112,6 +112,24 @@ Checkout our developer doc on our token standard https://aptos.dev/concepts/coin
 
 
 
+<details>
+<summary>Show all the modules that "token" depends on directly or indirectly</summary>
+
+
+![](img/token_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "token" directly or indirectly</summary>
+
+
+![](img/token_backward_dep.svg)
+
+
+</details>
+
 <a name="0x3_token_Token"></a>
 
 ## Struct `Token`
@@ -1489,6 +1507,24 @@ create a empty token collection with parameters
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_collection_script" calls</summary>
+
+
+![](img/token_create_collection_script_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_collection_script"</summary>
+
+
+![](img/token_create_collection_script_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_create_token_script"></a>
 
 ## Function `create_token_script`
@@ -1551,6 +1587,24 @@ create token with raw inputs
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_token_script" calls</summary>
+
+
+![](img/token_create_token_script_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_token_script"</summary>
+
+
+![](img/token_create_token_script_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_mint_script"></a>
 
 ## Function `mint_script`
@@ -1589,6 +1643,24 @@ Mint more token from an existing token_data. Mint only adds more token to proper
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mint_script" calls</summary>
+
+
+![](img/token_mint_script_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mint_script"</summary>
+
+
+![](img/token_mint_script_backward_call_graph.svg)
 
 
 </details>
@@ -1643,6 +1715,24 @@ if the token property_version is not 0, we will just update the propertyMap and 
 
 </details>
 
+<details>
+<summary>Show all the functions that "mutate_token_properties" calls</summary>
+
+
+![](img/token_mutate_token_properties_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_token_properties"</summary>
+
+
+![](img/token_mutate_token_properties_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_direct_transfer_script"></a>
 
 ## Function `direct_transfer_script`
@@ -1676,6 +1766,24 @@ if the token property_version is not 0, we will just update the propertyMap and 
 
 </details>
 
+<details>
+<summary>Show all the functions that "direct_transfer_script" calls</summary>
+
+
+![](img/token_direct_transfer_script_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "direct_transfer_script"</summary>
+
+
+![](img/token_direct_transfer_script_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_opt_in_direct_transfer"></a>
 
 ## Function `opt_in_direct_transfer`
@@ -1699,6 +1807,24 @@ if the token property_version is not 0, we will just update the propertyMap and 
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "opt_in_direct_transfer" calls</summary>
+
+
+![](img/token_opt_in_direct_transfer_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "opt_in_direct_transfer"</summary>
+
+
+![](img/token_opt_in_direct_transfer_backward_call_graph.svg)
 
 
 </details>
@@ -1734,6 +1860,24 @@ The receiver <code><b>to</b></code> has to opt-in direct transfer first
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "transfer_with_opt_in" calls</summary>
+
+
+![](img/token_transfer_with_opt_in_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "transfer_with_opt_in"</summary>
+
+
+![](img/token_transfer_with_opt_in_backward_call_graph.svg)
 
 
 </details>
@@ -1824,6 +1968,24 @@ The token is owned at address owner
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "burn_by_creator" calls</summary>
+
+
+![](img/token_burn_by_creator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "burn_by_creator"</summary>
+
+
+![](img/token_burn_by_creator_backward_call_graph.svg)
 
 
 </details>
@@ -1924,6 +2086,24 @@ Burn a token by the token owner
 
 </details>
 
+<details>
+<summary>Show all the functions that "burn" calls</summary>
+
+
+![](img/token_burn_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "burn"</summary>
+
+
+![](img/token_burn_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_mutate_collection_description"></a>
 
 ## Function `mutate_collection_description`
@@ -1948,6 +2128,24 @@ Burn a token by the token owner
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mutate_collection_description" calls</summary>
+
+
+![](img/token_mutate_collection_description_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_collection_description"</summary>
+
+
+![](img/token_mutate_collection_description_backward_call_graph.svg)
 
 
 </details>
@@ -1977,6 +2175,24 @@ Burn a token by the token owner
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mutate_collection_uri" calls</summary>
+
+
+![](img/token_mutate_collection_uri_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_collection_uri"</summary>
+
+
+![](img/token_mutate_collection_uri_backward_call_graph.svg)
 
 
 </details>
@@ -2012,6 +2228,24 @@ Burn a token by the token owner
 
 </details>
 
+<details>
+<summary>Show all the functions that "mutate_collection_maximum" calls</summary>
+
+
+![](img/token_mutate_collection_maximum_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_collection_maximum"</summary>
+
+
+![](img/token_mutate_collection_maximum_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_mutate_tokendata_maximum"></a>
 
 ## Function `mutate_tokendata_maximum`
@@ -2039,6 +2273,24 @@ Burn a token by the token owner
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mutate_tokendata_maximum" calls</summary>
+
+
+![](img/token_mutate_tokendata_maximum_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_tokendata_maximum"</summary>
+
+
+![](img/token_mutate_tokendata_maximum_backward_call_graph.svg)
 
 
 </details>
@@ -2077,6 +2329,24 @@ Burn a token by the token owner
 
 </details>
 
+<details>
+<summary>Show all the functions that "mutate_tokendata_uri" calls</summary>
+
+
+![](img/token_mutate_tokendata_uri_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_tokendata_uri"</summary>
+
+
+![](img/token_mutate_tokendata_uri_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_mutate_tokendata_royalty"></a>
 
 ## Function `mutate_tokendata_royalty`
@@ -2106,6 +2376,24 @@ Burn a token by the token owner
 
 </details>
 
+<details>
+<summary>Show all the functions that "mutate_tokendata_royalty" calls</summary>
+
+
+![](img/token_mutate_tokendata_royalty_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_tokendata_royalty"</summary>
+
+
+![](img/token_mutate_tokendata_royalty_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_mutate_tokendata_description"></a>
 
 ## Function `mutate_tokendata_description`
@@ -2131,6 +2419,24 @@ Burn a token by the token owner
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mutate_tokendata_description" calls</summary>
+
+
+![](img/token_mutate_tokendata_description_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_tokendata_description"</summary>
+
+
+![](img/token_mutate_tokendata_description_backward_call_graph.svg)
 
 
 </details>
@@ -2167,6 +2473,24 @@ Allow creator to mutate the default properties in TokenData
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mutate_tokendata_property" calls</summary>
+
+
+![](img/token_mutate_tokendata_property_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_tokendata_property"</summary>
+
+
+![](img/token_mutate_tokendata_property_backward_call_graph.svg)
 
 
 </details>
@@ -2267,6 +2591,24 @@ Allow creator to mutate the default properties in TokenData
 
 </details>
 
+<details>
+<summary>Show all the functions that "mutate_one_token" calls</summary>
+
+
+![](img/token_mutate_one_token_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mutate_one_token"</summary>
+
+
+![](img/token_mutate_one_token_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_create_royalty"></a>
 
 ## Function `create_royalty`
@@ -2298,6 +2640,24 @@ Allow creator to mutate the default properties in TokenData
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_royalty" calls</summary>
+
+
+![](img/token_create_royalty_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_royalty"</summary>
+
+
+![](img/token_create_royalty_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_deposit_token"></a>
 
 ## Function `deposit_token`
@@ -2321,6 +2681,24 @@ Deposit the token balance into the owner's account and emit an event.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "deposit_token" calls</summary>
+
+
+![](img/token_deposit_token_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "deposit_token"</summary>
+
+
+![](img/token_deposit_token_backward_call_graph.svg)
 
 
 </details>
@@ -2352,6 +2730,24 @@ direct deposit if user opt in direct transfer
 
 </details>
 
+<details>
+<summary>Show all the functions that "direct_deposit_with_opt_in" calls</summary>
+
+
+![](img/token_direct_deposit_with_opt_in_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "direct_deposit_with_opt_in"</summary>
+
+
+![](img/token_direct_deposit_with_opt_in_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_direct_transfer"></a>
 
 ## Function `direct_transfer`
@@ -2378,6 +2774,24 @@ direct deposit if user opt in direct transfer
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "direct_transfer" calls</summary>
+
+
+![](img/token_direct_transfer_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "direct_transfer"</summary>
+
+
+![](img/token_direct_transfer_backward_call_graph.svg)
 
 
 </details>
@@ -2418,6 +2832,24 @@ direct deposit if user opt in direct transfer
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize_token_store" calls</summary>
+
+
+![](img/token_initialize_token_store_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize_token_store"</summary>
+
+
+![](img/token_initialize_token_store_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_merge"></a>
 
 ## Function `merge`
@@ -2440,6 +2872,24 @@ direct deposit if user opt in direct transfer
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "merge" calls</summary>
+
+
+![](img/token_merge_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "merge"</summary>
+
+
+![](img/token_merge_backward_call_graph.svg)
 
 
 </details>
@@ -2476,6 +2926,24 @@ direct deposit if user opt in direct transfer
 
 </details>
 
+<details>
+<summary>Show all the functions that "split" calls</summary>
+
+
+![](img/token_split_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "split"</summary>
+
+
+![](img/token_split_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_token_id"></a>
 
 ## Function `token_id`
@@ -2496,6 +2964,24 @@ direct deposit if user opt in direct transfer
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "token_id" calls</summary>
+
+
+![](img/token_token_id_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "token_id"</summary>
+
+
+![](img/token_token_id_backward_call_graph.svg)
 
 
 </details>
@@ -2529,6 +3015,24 @@ Transfers <code>amount</code> of tokens from <code>from</code> to <code><b>to</b
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "transfer" calls</summary>
+
+
+![](img/token_transfer_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "transfer"</summary>
+
+
+![](img/token_transfer_backward_call_graph.svg)
 
 
 </details>
@@ -2568,6 +3072,24 @@ Token owner can create this one-time withdraw capability with an expiration time
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_withdraw_capability" calls</summary>
+
+
+![](img/token_create_withdraw_capability_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_withdraw_capability"</summary>
+
+
+![](img/token_create_withdraw_capability_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_withdraw_with_capability"></a>
 
 ## Function `withdraw_with_capability`
@@ -2602,6 +3124,24 @@ Withdraw the token with a capability
 
 </details>
 
+<details>
+<summary>Show all the functions that "withdraw_with_capability" calls</summary>
+
+
+![](img/token_withdraw_with_capability_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "withdraw_with_capability"</summary>
+
+
+![](img/token_withdraw_with_capability_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_withdraw_token"></a>
 
 ## Function `withdraw_token`
@@ -2627,6 +3167,24 @@ Withdraw the token with a capability
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "withdraw_token" calls</summary>
+
+
+![](img/token_withdraw_token_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "withdraw_token"</summary>
+
+
+![](img/token_withdraw_token_backward_call_graph.svg)
 
 
 </details>
@@ -2707,6 +3265,24 @@ Create a new collection to hold tokens
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_collection" calls</summary>
+
+
+![](img/token_create_collection_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_collection"</summary>
+
+
+![](img/token_create_collection_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_check_collection_exists"></a>
 
 ## Function `check_collection_exists`
@@ -2733,6 +3309,24 @@ Create a new collection to hold tokens
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "check_collection_exists" calls</summary>
+
+
+![](img/token_check_collection_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "check_collection_exists"</summary>
+
+
+![](img/token_check_collection_exists_backward_call_graph.svg)
 
 
 </details>
@@ -2764,6 +3358,24 @@ Create a new collection to hold tokens
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "check_tokendata_exists" calls</summary>
+
+
+![](img/token_check_tokendata_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "check_tokendata_exists"</summary>
+
+
+![](img/token_check_tokendata_exists_backward_call_graph.svg)
 
 
 </details>
@@ -2874,6 +3486,24 @@ Create a new collection to hold tokens
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_tokendata" calls</summary>
+
+
+![](img/token_create_tokendata_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_tokendata"</summary>
+
+
+![](img/token_create_tokendata_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_collection_supply"></a>
 
 ## Function `get_collection_supply`
@@ -2906,6 +3536,24 @@ return the number of distinct token_data_id created under this collection
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_collection_supply" calls</summary>
+
+
+![](img/token_get_collection_supply_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_collection_supply"</summary>
+
+
+![](img/token_get_collection_supply_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_collection_description"></a>
 
 ## Function `get_collection_description`
@@ -2928,6 +3576,24 @@ return the number of distinct token_data_id created under this collection
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_collection_description" calls</summary>
+
+
+![](img/token_get_collection_description_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_collection_description"</summary>
+
+
+![](img/token_get_collection_description_backward_call_graph.svg)
 
 
 </details>
@@ -2958,6 +3624,24 @@ return the number of distinct token_data_id created under this collection
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_collection_uri" calls</summary>
+
+
+![](img/token_get_collection_uri_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_collection_uri"</summary>
+
+
+![](img/token_get_collection_uri_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_collection_maximum"></a>
 
 ## Function `get_collection_maximum`
@@ -2980,6 +3664,24 @@ return the number of distinct token_data_id created under this collection
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_collection_maximum" calls</summary>
+
+
+![](img/token_get_collection_maximum_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_collection_maximum"</summary>
+
+
+![](img/token_get_collection_maximum_backward_call_graph.svg)
 
 
 </details>
@@ -3018,6 +3720,24 @@ return the number of distinct token_id created under this TokenData
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_token_supply" calls</summary>
+
+
+![](img/token_get_token_supply_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_token_supply"</summary>
+
+
+![](img/token_get_token_supply_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_tokendata_largest_property_version"></a>
 
 ## Function `get_tokendata_largest_property_version`
@@ -3046,6 +3766,24 @@ return the largest_property_version of this TokenData
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_tokendata_largest_property_version" calls</summary>
+
+
+![](img/token_get_tokendata_largest_property_version_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_tokendata_largest_property_version"</summary>
+
+
+![](img/token_get_tokendata_largest_property_version_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_token_id"></a>
 
 ## Function `get_token_id`
@@ -3067,6 +3805,24 @@ return the TokenId for a given Token
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_token_id" calls</summary>
+
+
+![](img/token_get_token_id_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_token_id"</summary>
+
+
+![](img/token_get_token_id_backward_call_graph.svg)
 
 
 </details>
@@ -3101,6 +3857,24 @@ return the TokenId for a given Token
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_token_mutability_config" calls</summary>
+
+
+![](img/token_create_token_mutability_config_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_token_mutability_config"</summary>
+
+
+![](img/token_create_token_mutability_config_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_create_collection_mutability_config"></a>
 
 ## Function `create_collection_mutability_config`
@@ -3125,6 +3899,24 @@ return the TokenId for a given Token
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_collection_mutability_config" calls</summary>
+
+
+![](img/token_create_collection_mutability_config_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_collection_mutability_config"</summary>
+
+
+![](img/token_create_collection_mutability_config_backward_call_graph.svg)
 
 
 </details>
@@ -3181,6 +3973,24 @@ return the TokenId for a given Token
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "mint_token" calls</summary>
+
+
+![](img/token_mint_token_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mint_token"</summary>
+
+
+![](img/token_mint_token_backward_call_graph.svg)
 
 
 </details>
@@ -3246,6 +4056,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 
 </details>
 
+<details>
+<summary>Show all the functions that "mint_token_to" calls</summary>
+
+
+![](img/token_mint_token_to_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "mint_token_to"</summary>
+
+
+![](img/token_mint_token_to_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_create_token_id"></a>
 
 ## Function `create_token_id`
@@ -3269,6 +4097,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_token_id" calls</summary>
+
+
+![](img/token_create_token_id_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_token_id"</summary>
+
+
+![](img/token_create_token_id_backward_call_graph.svg)
 
 
 </details>
@@ -3299,6 +4145,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "create_token_data_id" calls</summary>
+
+
+![](img/token_create_token_data_id_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_token_data_id"</summary>
+
+
+![](img/token_create_token_data_id_backward_call_graph.svg)
 
 
 </details>
@@ -3335,6 +4199,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_token_id_raw" calls</summary>
+
+
+![](img/token_create_token_id_raw_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_token_id_raw"</summary>
+
+
+![](img/token_create_token_id_raw_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_balance_of"></a>
 
 ## Function `balance_of`
@@ -3367,6 +4249,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 
 </details>
 
+<details>
+<summary>Show all the functions that "balance_of" calls</summary>
+
+
+![](img/token_balance_of_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "balance_of"</summary>
+
+
+![](img/token_balance_of_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_has_token_store"></a>
 
 ## Function `has_token_store`
@@ -3387,6 +4287,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "has_token_store" calls</summary>
+
+
+![](img/token_has_token_store_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "has_token_store"</summary>
+
+
+![](img/token_has_token_store_backward_call_graph.svg)
 
 
 </details>
@@ -3416,6 +4334,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_royalty" calls</summary>
+
+
+![](img/token_get_royalty_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_royalty"</summary>
+
+
+![](img/token_get_royalty_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_royalty_numerator"></a>
 
 ## Function `get_royalty_numerator`
@@ -3436,6 +4372,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_royalty_numerator" calls</summary>
+
+
+![](img/token_get_royalty_numerator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_royalty_numerator"</summary>
+
+
+![](img/token_get_royalty_numerator_backward_call_graph.svg)
 
 
 </details>
@@ -3464,6 +4418,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_royalty_denominator" calls</summary>
+
+
+![](img/token_get_royalty_denominator_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_royalty_denominator"</summary>
+
+
+![](img/token_get_royalty_denominator_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_royalty_payee"></a>
 
 ## Function `get_royalty_payee`
@@ -3488,6 +4460,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_royalty_payee" calls</summary>
+
+
+![](img/token_get_royalty_payee_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_royalty_payee"</summary>
+
+
+![](img/token_get_royalty_payee_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_token_amount"></a>
 
 ## Function `get_token_amount`
@@ -3508,6 +4498,24 @@ create tokens and directly deposite to receiver's address. The receiver should o
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_token_amount" calls</summary>
+
+
+![](img/token_get_token_amount_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_token_amount"</summary>
+
+
+![](img/token_get_token_amount_backward_call_graph.svg)
 
 
 </details>
@@ -3542,6 +4550,24 @@ return the creator address, collection name, token name and property_version
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_token_id_fields" calls</summary>
+
+
+![](img/token_get_token_id_fields_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_token_id_fields"</summary>
+
+
+![](img/token_get_token_id_fields_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_token_data_id_fields"></a>
 
 ## Function `get_token_data_id_fields`
@@ -3566,6 +4592,24 @@ return the creator address, collection name, token name and property_version
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_token_data_id_fields" calls</summary>
+
+
+![](img/token_get_token_data_id_fields_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_token_data_id_fields"</summary>
+
+
+![](img/token_get_token_data_id_fields_backward_call_graph.svg)
 
 
 </details>
@@ -3608,6 +4652,24 @@ if property_version > 0, return the property value stored at owner's token store
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_property_map" calls</summary>
+
+
+![](img/token_get_property_map_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_property_map"</summary>
+
+
+![](img/token_get_property_map_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_tokendata_maximum"></a>
 
 ## Function `get_tokendata_maximum`
@@ -3638,6 +4700,24 @@ if property_version > 0, return the property value stored at owner's token store
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_tokendata_maximum" calls</summary>
+
+
+![](img/token_get_tokendata_maximum_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_tokendata_maximum"</summary>
+
+
+![](img/token_get_tokendata_maximum_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_tokendata_uri"></a>
 
 ## Function `get_tokendata_uri`
@@ -3663,6 +4743,24 @@ if property_version > 0, return the property value stored at owner's token store
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_tokendata_uri" calls</summary>
+
+
+![](img/token_get_tokendata_uri_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_tokendata_uri"</summary>
+
+
+![](img/token_get_tokendata_uri_backward_call_graph.svg)
 
 
 </details>
@@ -3697,6 +4795,24 @@ if property_version > 0, return the property value stored at owner's token store
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_tokendata_description" calls</summary>
+
+
+![](img/token_get_tokendata_description_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_tokendata_description"</summary>
+
+
+![](img/token_get_tokendata_description_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_get_tokendata_royalty"></a>
 
 ## Function `get_tokendata_royalty`
@@ -3723,6 +4839,24 @@ if property_version > 0, return the property value stored at owner's token store
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_tokendata_royalty" calls</summary>
+
+
+![](img/token_get_tokendata_royalty_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_tokendata_royalty"</summary>
+
+
+![](img/token_get_tokendata_royalty_backward_call_graph.svg)
 
 
 </details>
@@ -3761,6 +4895,24 @@ if property_version > 0, return the property value stored at owner's token store
 
 </details>
 
+<details>
+<summary>Show all the functions that "destroy_token_data" calls</summary>
+
+
+![](img/token_destroy_token_data_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "destroy_token_data"</summary>
+
+
+![](img/token_destroy_token_data_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_destroy_collection_data"></a>
 
 ## Function `destroy_collection_data`
@@ -3788,6 +4940,24 @@ if property_version > 0, return the property value stored at owner's token store
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "destroy_collection_data" calls</summary>
+
+
+![](img/token_destroy_collection_data_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "destroy_collection_data"</summary>
+
+
+![](img/token_destroy_collection_data_backward_call_graph.svg)
 
 
 </details>
@@ -3847,6 +5017,24 @@ if property_version > 0, return the property value stored at owner's token store
 
 </details>
 
+<details>
+<summary>Show all the functions that "withdraw_with_event_internal" calls</summary>
+
+
+![](img/token_withdraw_with_event_internal_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "withdraw_with_event_internal"</summary>
+
+
+![](img/token_withdraw_with_event_internal_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_update_token_property_internal"></a>
 
 ## Function `update_token_property_internal`
@@ -3878,6 +5066,24 @@ if property_version > 0, return the property value stored at owner's token store
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "update_token_property_internal" calls</summary>
+
+
+![](img/token_update_token_property_internal_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "update_token_property_internal"</summary>
+
+
+![](img/token_update_token_property_internal_backward_call_graph.svg)
 
 
 </details>
@@ -3925,6 +5131,24 @@ Deposit the token balance into the recipients account and emit an event.
 
 </details>
 
+<details>
+<summary>Show all the functions that "direct_deposit" calls</summary>
+
+
+![](img/token_direct_deposit_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "direct_deposit"</summary>
+
+
+![](img/token_direct_deposit_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_assert_collection_exists"></a>
 
 ## Function `assert_collection_exists`
@@ -3947,6 +5171,24 @@ Deposit the token balance into the recipients account and emit an event.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "assert_collection_exists" calls</summary>
+
+
+![](img/token_assert_collection_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_collection_exists"</summary>
+
+
+![](img/token_assert_collection_exists_backward_call_graph.svg)
 
 
 </details>
@@ -3979,6 +5221,24 @@ Deposit the token balance into the recipients account and emit an event.
 
 </details>
 
+<details>
+<summary>Show all the functions that "assert_tokendata_exists" calls</summary>
+
+
+![](img/token_assert_tokendata_exists_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "assert_tokendata_exists"</summary>
+
+
+![](img/token_assert_tokendata_exists_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_initialize_token_script"></a>
 
 ## Function `initialize_token_script`
@@ -4003,6 +5263,24 @@ Deposit the token balance into the recipients account and emit an event.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize_token_script" calls</summary>
+
+
+![](img/token_initialize_token_script_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize_token_script"</summary>
+
+
+![](img/token_initialize_token_script_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x3_token_initialize_token"></a>
 
 ## Function `initialize_token`
@@ -4023,6 +5301,24 @@ Deposit the token balance into the recipients account and emit an event.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "initialize_token" calls</summary>
+
+
+![](img/token_initialize_token_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize_token"</summary>
+
+
+![](img/token_initialize_token_backward_call_graph.svg)
 
 
 </details>

@@ -41,6 +41,24 @@ This module has the exact same interface as the Ed25519 module.
 
 
 
+<details>
+<summary>Show all the modules that "multi_ed25519" depends on directly or indirectly</summary>
+
+
+![](img/multi_ed25519_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "multi_ed25519" directly or indirectly</summary>
+
+
+![](img/multi_ed25519_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_UnvalidatedPublicKey"></a>
 
 ## Struct `UnvalidatedPublicKey`
@@ -261,6 +279,24 @@ Parses the input 32 bytes as an *unvalidated* MultiEd25519 public key.
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_unvalidated_public_key_from_bytes" calls</summary>
+
+
+![](img/multi_ed25519_new_unvalidated_public_key_from_bytes_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_unvalidated_public_key_from_bytes"</summary>
+
+
+![](img/multi_ed25519_new_unvalidated_public_key_from_bytes_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_new_validated_public_key_from_bytes"></a>
 
 ## Function `new_validated_public_key_from_bytes`
@@ -293,6 +329,24 @@ Parses the input bytes as a *validated* MultiEd25519 public key.
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_validated_public_key_from_bytes" calls</summary>
+
+
+![](img/multi_ed25519_new_validated_public_key_from_bytes_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_validated_public_key_from_bytes"</summary>
+
+
+![](img/multi_ed25519_new_validated_public_key_from_bytes_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_new_signature_from_bytes"></a>
 
 ## Function `new_signature_from_bytes`
@@ -315,6 +369,24 @@ Parses the input bytes as a purported MultiEd25519 multi-signature.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "new_signature_from_bytes" calls</summary>
+
+
+![](img/multi_ed25519_new_signature_from_bytes_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_signature_from_bytes"</summary>
+
+
+![](img/multi_ed25519_new_signature_from_bytes_backward_call_graph.svg)
 
 
 </details>
@@ -346,6 +418,24 @@ Converts a ValidatedPublicKey to an UnvalidatedPublicKey, which can be used in t
 
 </details>
 
+<details>
+<summary>Show all the functions that "public_key_to_unvalidated" calls</summary>
+
+
+![](img/multi_ed25519_public_key_to_unvalidated_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "public_key_to_unvalidated"</summary>
+
+
+![](img/multi_ed25519_public_key_to_unvalidated_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_public_key_into_unvalidated"></a>
 
 ## Function `public_key_into_unvalidated`
@@ -369,6 +459,24 @@ Moves a ValidatedPublicKey into an UnvalidatedPublicKey, which can be used in th
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "public_key_into_unvalidated" calls</summary>
+
+
+![](img/multi_ed25519_public_key_into_unvalidated_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "public_key_into_unvalidated"</summary>
+
+
+![](img/multi_ed25519_public_key_into_unvalidated_backward_call_graph.svg)
 
 
 </details>
@@ -398,6 +506,24 @@ Serializes an UnvalidatedPublicKey struct to 32-bytes.
 
 </details>
 
+<details>
+<summary>Show all the functions that "unvalidated_public_key_to_bytes" calls</summary>
+
+
+![](img/multi_ed25519_unvalidated_public_key_to_bytes_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "unvalidated_public_key_to_bytes"</summary>
+
+
+![](img/multi_ed25519_unvalidated_public_key_to_bytes_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_validated_public_key_to_bytes"></a>
 
 ## Function `validated_public_key_to_bytes`
@@ -419,6 +545,24 @@ Serializes an ValidatedPublicKey struct to 32-bytes.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "validated_public_key_to_bytes" calls</summary>
+
+
+![](img/multi_ed25519_validated_public_key_to_bytes_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "validated_public_key_to_bytes"</summary>
+
+
+![](img/multi_ed25519_validated_public_key_to_bytes_backward_call_graph.svg)
 
 
 </details>
@@ -448,6 +592,24 @@ Serializes a Signature struct to 64-bytes.
 
 </details>
 
+<details>
+<summary>Show all the functions that "signature_to_bytes" calls</summary>
+
+
+![](img/multi_ed25519_signature_to_bytes_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "signature_to_bytes"</summary>
+
+
+![](img/multi_ed25519_signature_to_bytes_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_public_key_validate"></a>
 
 ## Function `public_key_validate`
@@ -470,6 +632,24 @@ Returns <code>Some(<a href="multi_ed25519.md#0x1_multi_ed25519_ValidatedPublicKe
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "public_key_validate" calls</summary>
+
+
+![](img/multi_ed25519_public_key_validate_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "public_key_validate"</summary>
+
+
+![](img/multi_ed25519_public_key_validate_backward_call_graph.svg)
 
 
 </details>
@@ -504,6 +684,24 @@ This call will validate the public key by checking it is NOT in the small subgro
 
 </details>
 
+<details>
+<summary>Show all the functions that "signature_verify_strict" calls</summary>
+
+
+![](img/multi_ed25519_signature_verify_strict_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "signature_verify_strict"</summary>
+
+
+![](img/multi_ed25519_signature_verify_strict_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_signature_verify_strict_t"></a>
 
 ## Function `signature_verify_strict_t`
@@ -528,6 +726,24 @@ proof of private key ownership when rotating authentication keys.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "signature_verify_strict_t" calls</summary>
+
+
+![](img/multi_ed25519_signature_verify_strict_t_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "signature_verify_strict_t"</summary>
+
+
+![](img/multi_ed25519_signature_verify_strict_t_backward_call_graph.svg)
 
 
 </details>
@@ -557,6 +773,24 @@ Derives the Aptos-specific authentication key of the given Ed25519 public key.
 
 </details>
 
+<details>
+<summary>Show all the functions that "unvalidated_public_key_to_authentication_key" calls</summary>
+
+
+![](img/multi_ed25519_unvalidated_public_key_to_authentication_key_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "unvalidated_public_key_to_authentication_key"</summary>
+
+
+![](img/multi_ed25519_unvalidated_public_key_to_authentication_key_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_validated_public_key_to_authentication_key"></a>
 
 ## Function `validated_public_key_to_authentication_key`
@@ -578,6 +812,24 @@ Derives the Aptos-specific authentication key of the given Ed25519 public key.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "validated_public_key_to_authentication_key" calls</summary>
+
+
+![](img/multi_ed25519_validated_public_key_to_authentication_key_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "validated_public_key_to_authentication_key"</summary>
+
+
+![](img/multi_ed25519_validated_public_key_to_authentication_key_backward_call_graph.svg)
 
 
 </details>
@@ -608,6 +860,24 @@ Derives the Aptos-specific authentication key of the given Ed25519 public key.
 
 </details>
 
+<details>
+<summary>Show all the functions that "public_key_bytes_to_authentication_key" calls</summary>
+
+
+![](img/multi_ed25519_public_key_bytes_to_authentication_key_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "public_key_bytes_to_authentication_key"</summary>
+
+
+![](img/multi_ed25519_public_key_bytes_to_authentication_key_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_multi_ed25519_public_key_validate_internal"></a>
 
 ## Function `public_key_validate_internal`
@@ -629,6 +899,24 @@ Returns <code><b>false</b></code> otherwise.
 <pre><code><b>native</b> <b>fun</b> <a href="multi_ed25519.md#0x1_multi_ed25519_public_key_validate_internal">public_key_validate_internal</a>(bytes: <a href="../../move-stdlib/doc/vector.md#0x1_vector">vector</a>&lt;u8&gt;): bool;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "public_key_validate_internal" calls</summary>
+
+
+![](img/multi_ed25519_public_key_validate_internal_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "public_key_validate_internal"</summary>
+
+
+![](img/multi_ed25519_public_key_validate_internal_backward_call_graph.svg)
 
 
 </details>
@@ -660,6 +948,24 @@ Returns <code><b>false</b></code> if either:
 ): bool;
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "signature_verify_strict_internal" calls</summary>
+
+
+![](img/multi_ed25519_signature_verify_strict_internal_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "signature_verify_strict_internal"</summary>
+
+
+![](img/multi_ed25519_signature_verify_strict_internal_backward_call_graph.svg)
 
 
 </details>

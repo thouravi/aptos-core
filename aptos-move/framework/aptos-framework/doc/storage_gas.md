@@ -253,6 +253,24 @@ The below index is automatically generated from source code:
 
 
 
+<details>
+<summary>Show all the modules that "storage_gas" depends on directly or indirectly</summary>
+
+
+![](img/storage_gas_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "storage_gas" directly or indirectly</summary>
+
+
+![](img/storage_gas_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_StorageGas"></a>
 
 ## Resource `StorageGas`
@@ -690,6 +708,24 @@ Which means that the price above <code>min_gas</code> is approximately
 
 </details>
 
+<details>
+<summary>Show all the functions that "base_8192_exponential_curve" calls</summary>
+
+
+![](img/storage_gas_base_8192_exponential_curve_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "base_8192_exponential_curve"</summary>
+
+
+![](img/storage_gas_base_8192_exponential_curve_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_new_point"></a>
 
 ## Function `new_point`
@@ -714,6 +750,24 @@ Which means that the price above <code>min_gas</code> is approximately
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "new_point" calls</summary>
+
+
+![](img/storage_gas_new_point_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_point"</summary>
+
+
+![](img/storage_gas_new_point_backward_call_graph.svg)
 
 
 </details>
@@ -749,6 +803,24 @@ Which means that the price above <code>min_gas</code> is approximately
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_gas_curve" calls</summary>
+
+
+![](img/storage_gas_new_gas_curve_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_gas_curve"</summary>
+
+
+![](img/storage_gas_new_gas_curve_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_new_usage_gas_config"></a>
 
 ## Function `new_usage_gas_config`
@@ -780,6 +852,24 @@ Which means that the price above <code>min_gas</code> is approximately
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_usage_gas_config" calls</summary>
+
+
+![](img/storage_gas_new_usage_gas_config_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_usage_gas_config"</summary>
+
+
+![](img/storage_gas_new_usage_gas_config_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_new_storage_gas_config"></a>
 
 ## Function `new_storage_gas_config`
@@ -807,6 +897,24 @@ Which means that the price above <code>min_gas</code> is approximately
 
 </details>
 
+<details>
+<summary>Show all the functions that "new_storage_gas_config" calls</summary>
+
+
+![](img/storage_gas_new_storage_gas_config_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "new_storage_gas_config"</summary>
+
+
+![](img/storage_gas_new_storage_gas_config_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_set_config"></a>
 
 ## Function `set_config`
@@ -828,6 +936,24 @@ Which means that the price above <code>min_gas</code> is approximately
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "set_config" calls</summary>
+
+
+![](img/storage_gas_set_config_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "set_config"</summary>
+
+
+![](img/storage_gas_set_config_backward_call_graph.svg)
 
 
 </details>
@@ -914,6 +1040,24 @@ target utilization.
 
 </details>
 
+<details>
+<summary>Show all the functions that "initialize" calls</summary>
+
+
+![](img/storage_gas_initialize_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "initialize"</summary>
+
+
+![](img/storage_gas_initialize_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_validate_points"></a>
 
 ## Function `validate_points`
@@ -953,6 +1097,24 @@ target utilization.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "validate_points" calls</summary>
+
+
+![](img/storage_gas_validate_points_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "validate_points"</summary>
+
+
+![](img/storage_gas_validate_points_backward_call_graph.svg)
 
 
 </details>
@@ -1022,6 +1184,24 @@ target utilization.
 
 </details>
 
+<details>
+<summary>Show all the functions that "calculate_gas" calls</summary>
+
+
+![](img/storage_gas_calculate_gas_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "calculate_gas"</summary>
+
+
+![](img/storage_gas_calculate_gas_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_interpolate"></a>
 
 ## Function `interpolate`
@@ -1042,6 +1222,24 @@ target utilization.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "interpolate" calls</summary>
+
+
+![](img/storage_gas_interpolate_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "interpolate"</summary>
+
+
+![](img/storage_gas_interpolate_backward_call_graph.svg)
 
 
 </details>
@@ -1070,6 +1268,24 @@ target utilization.
 
 </details>
 
+<details>
+<summary>Show all the functions that "calculate_read_gas" calls</summary>
+
+
+![](img/storage_gas_calculate_read_gas_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "calculate_read_gas"</summary>
+
+
+![](img/storage_gas_calculate_read_gas_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_calculate_create_gas"></a>
 
 ## Function `calculate_create_gas`
@@ -1094,6 +1310,24 @@ target utilization.
 
 </details>
 
+<details>
+<summary>Show all the functions that "calculate_create_gas" calls</summary>
+
+
+![](img/storage_gas_calculate_create_gas_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "calculate_create_gas"</summary>
+
+
+![](img/storage_gas_calculate_create_gas_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_storage_gas_calculate_write_gas"></a>
 
 ## Function `calculate_write_gas`
@@ -1114,6 +1348,24 @@ target utilization.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "calculate_write_gas" calls</summary>
+
+
+![](img/storage_gas_calculate_write_gas_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "calculate_write_gas"</summary>
+
+
+![](img/storage_gas_calculate_write_gas_backward_call_graph.svg)
 
 
 </details>
@@ -1154,6 +1406,24 @@ target utilization.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "on_reconfig" calls</summary>
+
+
+![](img/storage_gas_on_reconfig_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "on_reconfig"</summary>
+
+
+![](img/storage_gas_on_reconfig_backward_call_graph.svg)
 
 
 </details>

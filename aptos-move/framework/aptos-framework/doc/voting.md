@@ -65,6 +65,24 @@
 
 
 
+<details>
+<summary>Show all the modules that "voting" depends on directly or indirectly</summary>
+
+
+![](img/voting_forward_dep.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the modules that depend on "voting" directly or indirectly</summary>
+
+
+![](img/voting_backward_dep.svg)
+
+
+</details>
+
 <a name="0x1_voting_Proposal"></a>
 
 ## Struct `Proposal`
@@ -589,6 +607,24 @@ Key used to track the resolvable time in the proposal's metadata.
 
 </details>
 
+<details>
+<summary>Show all the functions that "register" calls</summary>
+
+
+![](img/voting_register_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "register"</summary>
+
+
+![](img/voting_register_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_voting_create_proposal"></a>
 
 ## Function `create_proposal`
@@ -672,6 +708,24 @@ this proposal.
 
 </details>
 
+<details>
+<summary>Show all the functions that "create_proposal" calls</summary>
+
+
+![](img/voting_create_proposal_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "create_proposal"</summary>
+
+
+![](img/voting_create_proposal_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_voting_vote"></a>
 
 ## Function `vote`
@@ -734,6 +788,24 @@ This guarantees that voting eligibility and voting power are controlled by the r
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "vote" calls</summary>
+
+
+![](img/voting_vote_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "vote"</summary>
+
+
+![](img/voting_vote_backward_call_graph.svg)
 
 
 </details>
@@ -801,6 +873,24 @@ there are more yes votes than no. If either of these conditions is not met, this
 
 </details>
 
+<details>
+<summary>Show all the functions that "resolve" calls</summary>
+
+
+![](img/voting_resolve_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "resolve"</summary>
+
+
+![](img/voting_resolve_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_voting_is_voting_closed"></a>
 
 ## Function `is_voting_closed`
@@ -823,6 +913,24 @@ there are more yes votes than no. If either of these conditions is not met, this
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_voting_closed" calls</summary>
+
+
+![](img/voting_is_voting_closed_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_voting_closed"</summary>
+
+
+![](img/voting_is_voting_closed_backward_call_graph.svg)
 
 
 </details>
@@ -854,6 +962,24 @@ Return true if the proposal has reached early resolution threshold (if specified
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "can_be_resolved_early" calls</summary>
+
+
+![](img/voting_can_be_resolved_early_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "can_be_resolved_early"</summary>
+
+
+![](img/voting_can_be_resolved_early_backward_call_graph.svg)
 
 
 </details>
@@ -903,6 +1029,24 @@ Return the state of the proposal with given id.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_proposal_state" calls</summary>
+
+
+![](img/voting_get_proposal_state_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_proposal_state"</summary>
+
+
+![](img/voting_get_proposal_state_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_voting_get_proposal_expiration_secs"></a>
 
 ## Function `get_proposal_expiration_secs`
@@ -929,6 +1073,24 @@ Return the proposal's expiration time.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "get_proposal_expiration_secs" calls</summary>
+
+
+![](img/voting_get_proposal_expiration_secs_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_proposal_expiration_secs"</summary>
+
+
+![](img/voting_get_proposal_expiration_secs_backward_call_graph.svg)
 
 
 </details>
@@ -963,6 +1125,24 @@ Return the proposal's execution hash.
 
 </details>
 
+<details>
+<summary>Show all the functions that "get_execution_hash" calls</summary>
+
+
+![](img/voting_get_execution_hash_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "get_execution_hash"</summary>
+
+
+![](img/voting_get_execution_hash_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_voting_is_resolved"></a>
 
 ## Function `is_resolved`
@@ -993,6 +1173,24 @@ Return true if the governance proposal has already been resolved.
 
 </details>
 
+<details>
+<summary>Show all the functions that "is_resolved" calls</summary>
+
+
+![](img/voting_is_resolved_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_resolved"</summary>
+
+
+![](img/voting_is_resolved_backward_call_graph.svg)
+
+
+</details>
+
 <a name="0x1_voting_is_voting_period_over"></a>
 
 ## Function `is_voting_period_over`
@@ -1014,6 +1212,24 @@ Return true if the voting period of the given proposal has already ended.
 }
 </code></pre>
 
+
+
+</details>
+
+<details>
+<summary>Show all the functions that "is_voting_period_over" calls</summary>
+
+
+![](img/voting_is_voting_period_over_forward_call_graph.svg)
+
+
+</details>
+
+<details>
+<summary>Show all the functions that call "is_voting_period_over"</summary>
+
+
+![](img/voting_is_voting_period_over_backward_call_graph.svg)
 
 
 </details>
