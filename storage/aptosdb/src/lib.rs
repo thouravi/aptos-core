@@ -1488,6 +1488,11 @@ impl DbWriter for AptosDB {
         latest_in_memory_state: StateDelta,
     ) -> Result<()> {
         gauged_api("save_transactions", || {
+            if option_env!("APTOS_CONSENSUS_ONLY").is_some() && first_version > 0 {
+                self.save_ledger_info(ledger_info_with_sigs);
+                return Ok(());
+            }
+
             // Executing and committing from more than one threads not allowed -- consensus and
             // state sync must hand over to each other after all pending execution and committing
             // complete.
@@ -1639,13 +1644,7 @@ impl DbWriter for AptosDB {
                 indexer.index(self.state_store.clone(), first_version, &write_sets)?;
             }
 
-            // Once everything is successfully persisted, update the latest in-memory ledger info.
-            if let Some(x) = ledger_info_with_sigs {
-                self.ledger_store.set_latest_ledger_info(x.clone());
-
-                LEDGER_VERSION.set(x.ledger_info().version() as i64);
-                NEXT_BLOCK_EPOCH.set(x.ledger_info().next_block_epoch() as i64);
-            }
+            self.save_ledger_info(ledger_info_with_sigs);
 
             Ok(())
         })
@@ -1755,6 +1754,18 @@ impl DbWriter for AptosDB {
 
             Ok(())
         })
+    }
+}
+
+impl AptosDB {
+    fn save_ledger_info(&self, ledger_info_with_sigs: Option<&LedgerInfoWithSignatures>) {
+        // Once everything is successfully persisted, update the latest in-memory ledger info.
+        if let Some(x) = ledger_info_with_sigs {
+            self.ledger_store.set_latest_ledger_info(x.clone());
+
+            LEDGER_VERSION.set(x.ledger_info().version() as i64);
+            NEXT_BLOCK_EPOCH.set(x.ledger_info().next_block_epoch() as i64);
+        }
     }
 }
 
