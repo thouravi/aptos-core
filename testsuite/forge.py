@@ -803,21 +803,22 @@ def list_eks_clusters(shell: Shell) -> List[str]:
 
 
 async def write_cluster_config(
-    shell: Shell, forge_cluster_name: str, temp: str
+    shell: Shell, forge_cluster_name: str, temp: str, region: Optional[str] = None
 ) -> None:
-    (
-        await shell.gen_run(
-            [
-                "aws",
-                "eks",
-                "update-kubeconfig",
-                "--name",
-                forge_cluster_name,
-                "--kubeconfig",
-                temp,
-            ]
-        )
-    ).unwrap()
+    region_args = []
+    if region is not None:
+        region_args = ["--region", region]
+    cluster_config_args = [
+        "aws",
+        "eks",
+        "update-kubeconfig",
+        "--name",
+        forge_cluster_name,
+        "--kubeconfig",
+        temp,
+    ] + region_args
+    print(cluster_config_args)
+    (await shell.gen_run(cluster_config_args)).unwrap()
 
 
 def get_current_cluster_name(shell: Shell) -> str:
@@ -1460,7 +1461,9 @@ class ForgeCluster:
     kubeconf: str
 
     async def write(self, shell: Shell) -> None:
-        await write_cluster_config(shell, self.name, self.kubeconf)
+        # for now, region is encoded in the cluster name
+        region = "us-east-1" if "east" in self.name else None
+        await write_cluster_config(shell, self.name, self.kubeconf, region=region)
 
     async def get_jobs(self, shell: Shell) -> List[ForgeJob]:
         pod_result = (
