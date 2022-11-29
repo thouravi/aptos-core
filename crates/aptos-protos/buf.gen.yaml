@@ -14,3 +14,5 @@ plugins:
     strategy: all
     opt:
       - no_features
+  - name: tonic
+    out: src/pb
