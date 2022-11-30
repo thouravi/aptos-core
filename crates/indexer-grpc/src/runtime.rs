@@ -4,7 +4,8 @@
 use crate::metrics;
 use aptos_protos::{
     datastream::v1::{
-        indexer_stream_server::IndexerStream, RawDatastreamRequest, RawDatastreamResponse, TransactionData,
+        indexer_stream_server::IndexerStream, RawDatastreamRequest, RawDatastreamResponse,
+        TransactionData,
     },
     extractor::v1 as extractor,
 };
@@ -33,10 +34,12 @@ pub struct IndexerStreamService {}
 
 #[tonic::async_trait]
 impl IndexerStream for IndexerStreamService {
+    // type RawDatastreamStream: futures_core::Stream<Item = Result<super::RawDatastreamResponse, tonic::Status>>;
+
     async fn raw_datastream(
         &self,
         request: Request<RawDatastreamRequest>,
-    ) -> Result<Response<RawDatastreamResponse>, Status> {
+    ) -> Result<Response<Self::RawDatastreamStream>, Status> {
         let r = request.into_inner();
         let starting_version = r.starting_version;
         let fetcher_count = r.fetcher_count;
