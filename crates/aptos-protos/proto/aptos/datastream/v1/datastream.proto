@@ -13,13 +13,13 @@ message RawDatastreamRequest {
   uint64 starting_version = 1;
   uint64 fetcher_count = 2;
   uint64 processor_task_count = 3;
+  uint64 returned_batch_size = 4;
 }
 
 message RawDatastreamResponse {
-  uint64 size = 1;
-  TransactionData data = 2;
+  TransactionData data = 12;
 }
 
-service NodeDataService {
+service IndexerStream {
     rpc RawDatastream(RawDatastreamRequest) returns (stream RawDatastreamResponse);
 }

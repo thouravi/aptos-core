@@ -2,7 +2,13 @@
 // SPDX-License-Identifier: Apache-2.0
 
 use crate::metrics;
-use aptos_protos::extractor::v1 as extractor;
+use aptos_protos::{
+    datastream::v1::{
+        indexer_stream_server::IndexerStream, RawDatastreamRequest, RawDatastreamResponse, TransactionData,
+    },
+    extractor::v1 as extractor,
+};
+use tonic::{Request, Response, Status};
 
 use crate::convert::convert_transaction;
 use aptos_api::context::Context;
@@ -22,6 +28,28 @@ use tokio::{
     time::sleep,
 };
 
+#[derive(Debug, Default)]
+pub struct IndexerStreamService {}
+
+#[tonic::async_trait]
+impl IndexerStream for IndexerStreamService {
+    async fn raw_datastream(
+        &self,
+        request: Request<RawDatastreamRequest>,
+    ) -> Result<Response<RawDatastreamResponse>, Status> {
+        let r = request.into_inner();
+        let starting_version = r.starting_version;
+        let fetcher_count = r.fetcher_count;
+        let processor_task_count = r.processor_task_count;
+        let returned_batch_size = r.returned_batch_size;
+        Ok(Response::new(RawDatastreamResponse {
+            data: Some(TransactionData {
+                encoded_proto_data: vec![],
+            }),
+        }))
+    }
+}
+
 /// Creates a runtime which creates a thread pool which pushes firehose of block protobuf to SF endpoint
 /// Returns corresponding Tokio runtime
 pub fn bootstrap(
@@ -30,7 +58,7 @@ pub fn bootstrap(
     db: Arc<dyn DbReader>,
     mp_sender: MempoolClientSender,
 ) -> Option<anyhow::Result<Runtime>> {
-    if !config.firehose_stream.enabled {
+    if !config.indexer_rpc.enabled {
         return None;
     }
 
@@ -46,15 +74,7 @@ pub fn bootstrap(
     runtime.spawn(async move {
         let context = Context::new(chain_id, db, mp_sender.clone(), node_config.clone());
         let context_arc = Arc::new(context);
-        // Let the env variable take precedence over the config file, (if env is not set it just default to 0)
-        let config_starting_block = node_config.firehose_stream.starting_block.unwrap_or(0);
-        let mut starting_block = std::env::var("STARTING_BLOCK")
-            .map(|v| v.parse::<u64>().unwrap_or(0))
-            .unwrap_or(0);
-        if starting_block == 0 {
-            starting_block = config_starting_block;
-        }
-        let mut streamer = FirehoseStreamer::new(context_arc, starting_block, Some(mp_sender));
+        let mut streamer = FirehoseStreamer::new(context_arc, 0, Some(mp_sender));
         streamer.start().await;
     });
     Some(Ok(runtime))
@@ -264,5 +284,16 @@ impl FirehoseStreamer {
         });
         println!("\nFIRE TRX {}", base64::encode(buf));
         metrics::TRANSACTIONS_SENT.inc();
+    }
+
+    pub async fn start_stream(self: Arc<Self>) -> Result<(), Box<dyn std::error::Error>> {
+        let address = "[::1]:8080".parse().unwrap();
+        let node_data_service = RawDataStreamService::default();
+
+        Server::builder()
+            .add_service(VotingServer::new(voting_service))
+            .serve(address)
+            .await?;
+        Ok(())
     }
 }

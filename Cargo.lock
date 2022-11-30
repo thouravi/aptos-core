@@ -796,6 +796,7 @@ dependencies = [
  "serde_json",
  "storage-interface",
  "tokio",
+ "tonic",
  "vm-validator",
 ]
 
