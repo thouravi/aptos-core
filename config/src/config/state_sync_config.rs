@@ -22,6 +22,7 @@ pub enum BootstrappingMode {
     ApplyTransactionOutputsFromGenesis, // Applies transaction outputs (starting at genesis)
     DownloadLatestStates, // Downloads the state keys and values (at the latest version)
     ExecuteTransactionsFromGenesis, // Executes transactions (starting at genesis)
+    ExecuteOrApplyFromGenesis, // Executes transactions or applies outputs from genesis (whichever is faster)
 }
 
 impl BootstrappingMode {
@@ -34,6 +35,7 @@ impl BootstrappingMode {
             BootstrappingMode::ExecuteTransactionsFromGenesis => {
                 "execute_transactions_from_genesis"
             }
+            BootstrappingMode::ExecuteOrApplyFromGenesis => "execute_or_apply_from_genesis",
         }
     }
 }
@@ -45,6 +47,7 @@ impl BootstrappingMode {
 pub enum ContinuousSyncingMode {
     ApplyTransactionOutputs, // Applies transaction outputs to stay up-to-date
     ExecuteTransactions,     // Executes transactions to stay up-to-date
+    ExecuteTransactionsOrApplyOutputs, // Executes transactions or applies outputs to stay up-to-date (whichever is faster)
 }
 
 impl ContinuousSyncingMode {
@@ -52,6 +55,9 @@ impl ContinuousSyncingMode {
         match self {
             ContinuousSyncingMode::ApplyTransactionOutputs => "apply_transaction_outputs",
             ContinuousSyncingMode::ExecuteTransactions => "execute_transactions",
+            ContinuousSyncingMode::ExecuteTransactionsOrApplyOutputs => {
+                "execute_transactions_or_apply_outputs"
+            }
         }
     }
 }

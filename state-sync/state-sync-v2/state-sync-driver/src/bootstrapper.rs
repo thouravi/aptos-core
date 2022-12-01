@@ -705,6 +705,16 @@ impl<
                     )
                     .await?
             }
+            BootstrappingMode::ExecuteOrApplyFromGenesis => {
+                self.streaming_client
+                    .get_all_transactions_or_outputs(
+                        next_version,
+                        end_version,
+                        highest_known_ledger_version,
+                        false,
+                    )
+                    .await?
+            }
             bootstrapping_mode => {
                 unreachable!("Bootstrapping mode not supported: {:?}", bootstrapping_mode)
             }
@@ -1085,18 +1095,13 @@ impl<
         let num_transactions_or_outputs = match bootstrapping_mode {
             BootstrappingMode::ApplyTransactionOutputsFromGenesis => {
                 if let Some(transaction_outputs_with_proof) = transaction_outputs_with_proof {
-                    let num_transaction_outputs = transaction_outputs_with_proof
-                        .transactions_and_outputs
-                        .len();
-                    self.storage_synchronizer
-                        .apply_transaction_outputs(
-                            notification_id,
-                            transaction_outputs_with_proof,
-                            proof_ledger_info,
-                            end_of_epoch_ledger_info,
-                        )
-                        .await?;
-                    num_transaction_outputs
+                    self.apply_transaction_outputs(
+                        notification_id,
+                        proof_ledger_info,
+                        end_of_epoch_ledger_info,
+                        transaction_outputs_with_proof,
+                    )
+                    .await?
                 } else {
                     self.reset_active_stream(Some(NotificationAndFeedback::new(
                         notification_id,
@@ -1110,16 +1115,13 @@ impl<
             }
             BootstrappingMode::ExecuteTransactionsFromGenesis => {
                 if let Some(transaction_list_with_proof) = transaction_list_with_proof {
-                    let num_transactions = transaction_list_with_proof.transactions.len();
-                    self.storage_synchronizer
-                        .execute_transactions(
-                            notification_id,
-                            transaction_list_with_proof,
-                            proof_ledger_info,
-                            end_of_epoch_ledger_info,
-                        )
-                        .await?;
-                    num_transactions
+                    self.execute_transactions(
+                        notification_id,
+                        proof_ledger_info,
+                        end_of_epoch_ledger_info,
+                        transaction_list_with_proof,
+                    )
+                    .await?
                 } else {
                     self.reset_active_stream(Some(NotificationAndFeedback::new(
                         notification_id,
@@ -1128,6 +1130,35 @@ impl<
                     .await?;
                     return Err(Error::InvalidPayload(
                         "Did not receive transactions with proof!".into(),
+                    ));
+                }
+            }
+            BootstrappingMode::ExecuteOrApplyFromGenesis => {
+                if let Some(transaction_list_with_proof) = transaction_list_with_proof {
+                    self.execute_transactions(
+                        notification_id,
+                        proof_ledger_info,
+                        end_of_epoch_ledger_info,
+                        transaction_list_with_proof,
+                    )
+                    .await?
+                } else if let Some(transaction_outputs_with_proof) = transaction_outputs_with_proof
+                {
+                    self.apply_transaction_outputs(
+                        notification_id,
+                        proof_ledger_info,
+                        end_of_epoch_ledger_info,
+                        transaction_outputs_with_proof,
+                    )
+                    .await?
+                } else {
+                    self.reset_active_stream(Some(NotificationAndFeedback::new(
+                        notification_id,
+                        NotificationFeedback::PayloadTypeIsIncorrect,
+                    )))
+                    .await?;
+                    return Err(Error::InvalidPayload(
+                        "Did not receive transactions or outputs with proof!".into(),
                     ));
                 }
             }
@@ -1143,6 +1174,50 @@ impl<
             .update_synced_version(synced_version);
 
         Ok(())
+    }
+
+    /// Executes the given list of transactions and
+    /// returns the number of transactions in the list.
+    async fn execute_transactions(
+        &mut self,
+        notification_id: NotificationId,
+        proof_ledger_info: LedgerInfoWithSignatures,
+        end_of_epoch_ledger_info: Option<LedgerInfoWithSignatures>,
+        transaction_list_with_proof: TransactionListWithProof,
+    ) -> Result<usize, Error> {
+        let num_transactions = transaction_list_with_proof.transactions.len();
+        self.storage_synchronizer
+            .execute_transactions(
+                notification_id,
+                transaction_list_with_proof,
+                proof_ledger_info,
+                end_of_epoch_ledger_info,
+            )
+            .await?;
+        Ok(num_transactions)
+    }
+
+    /// Applies the given list of transaction outputs and
+    /// returns the number of outputs in the list.
+    async fn apply_transaction_outputs(
+        &mut self,
+        notification_id: NotificationId,
+        proof_ledger_info: LedgerInfoWithSignatures,
+        end_of_epoch_ledger_info: Option<LedgerInfoWithSignatures>,
+        transaction_outputs_with_proof: TransactionOutputListWithProof,
+    ) -> Result<usize, Error> {
+        let num_transaction_outputs = transaction_outputs_with_proof
+            .transactions_and_outputs
+            .len();
+        self.storage_synchronizer
+            .apply_transaction_outputs(
+                notification_id,
+                transaction_outputs_with_proof,
+                proof_ledger_info,
+                end_of_epoch_ledger_info,
+            )
+            .await?;
+        Ok(num_transaction_outputs)
     }
 
     /// Verifies the payload contains the transaction info we require to
@@ -1288,6 +1363,22 @@ impl<
                     .await?;
                     return Err(Error::InvalidPayload(
                         "Did not receive transactions with proof!".into(),
+                    ));
+                }
+            }
+            BootstrappingMode::ExecuteOrApplyFromGenesis => {
+                if let Some(transaction_list_with_proof) = transaction_list_with_proof {
+                    transaction_list_with_proof.transactions.len()
+                } else if let Some(output_list_with_proof) = transaction_outputs_with_proof {
+                    output_list_with_proof.transactions_and_outputs.len()
+                } else {
+                    self.reset_active_stream(Some(NotificationAndFeedback::new(
+                        notification_id,
+                        NotificationFeedback::PayloadTypeIsIncorrect,
+                    )))
+                    .await?;
+                    return Err(Error::InvalidPayload(
+                        "Did not receive transactions or outputs with proof!".into(),
                     ));
                 }
             }
