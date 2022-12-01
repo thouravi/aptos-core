@@ -25,6 +25,7 @@ use aptos_types::{
 };
 use aptosdb::AptosDB;
 use executor_types::{BlockExecutorTrait, ChunkExecutorTrait, TransactionReplayer};
+use std::collections::BTreeMap;
 use storage_interface::{sync_proof_fetcher::SyncProofFetcher, DbReaderWriter, ExecutedTrees};
 
 use crate::{
@@ -661,7 +662,7 @@ proptest! {
             // replay txns in one batch across epoch boundary,
             // and the replayer should deal with `Retry`s automatically
             let replayer = chunk_executor_tests::TestExecutor::new();
-            replayer.executor.replay(block.txns, txn_infos).unwrap();
+            replayer.executor.replay(block.txns, txn_infos, BTreeMap::new()).unwrap();
             replayer.executor.commit().unwrap();
             let replayed_db = replayer.db.reader.clone();
             prop_assert_eq!(

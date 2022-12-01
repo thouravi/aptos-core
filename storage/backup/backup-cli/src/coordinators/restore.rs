@@ -185,6 +185,7 @@ impl RestoreCoordinator {
             txn_manifests,
             Some(version + 1),
             epoch_history,
+            vec![],
         )
         .run()
         .await?;

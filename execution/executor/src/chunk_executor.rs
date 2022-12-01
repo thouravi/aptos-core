@@ -20,17 +20,20 @@ use aptos_infallible::{Mutex, RwLock};
 use aptos_logger::prelude::*;
 use aptos_state_view::StateViewId;
 use aptos_types::{
+    contract_event::ContractEvent,
     ledger_info::LedgerInfoWithSignatures,
     transaction::{
-        Transaction, TransactionInfo, TransactionListWithProof, TransactionOutputListWithProof,
+        Transaction, TransactionInfo, TransactionListWithProof, TransactionOutput,
+        TransactionOutputListWithProof, TransactionStatus,
     },
+    write_set::WriteSet,
 };
 use aptos_vm::VMExecutor;
 use executor_types::{
     ChunkCommitNotification, ChunkExecutorTrait, ExecutedChunk, TransactionReplayer,
 };
 use fail::fail_point;
-use std::{marker::PhantomData, sync::Arc};
+use std::{collections::BTreeMap, marker::PhantomData, sync::Arc};
 use storage_interface::{
     cached_state_view::CachedStateView, sync_proof_fetcher::SyncProofFetcher, DbReaderWriter,
     ExecutedTrees,
@@ -297,13 +300,14 @@ impl<V: VMExecutor> TransactionReplayer for ChunkExecutor<V> {
         &self,
         transactions: Vec<Transaction>,
         transaction_infos: Vec<TransactionInfo>,
+        txns_to_skip: BTreeMap<usize, (WriteSet, Vec<ContractEvent>)>,
     ) -> Result<()> {
         self.maybe_initialize()?;
-        self.inner
-            .read()
-            .as_ref()
-            .expect("not reset")
-            .replay(transactions, transaction_infos)
+        self.inner.read().as_ref().expect("not reset").replay(
+            transactions,
+            transaction_infos,
+            txns_to_skip,
+        )
     }
 
     fn commit(&self) -> Result<Arc<ExecutedChunk>> {
@@ -316,23 +320,43 @@ impl<V: VMExecutor> TransactionReplayer for ChunkExecutorInner<V> {
         &self,
         transactions: Vec<Transaction>,
         mut transaction_infos: Vec<TransactionInfo>,
+        txns_to_skip: BTreeMap<usize, (WriteSet, Vec<ContractEvent>)>,
     ) -> Result<()> {
         let (_persisted_view, mut latest_view) =
             self.commit_queue.lock().persisted_and_latest_view();
 
         let mut executed_chunk = ExecutedChunk::default();
         let mut to_run = Some(transactions);
+        let mut offset = 0;
+        info!(
+            "Need to skip: {:?}: {:?}, {:?}",
+            txns_to_skip,
+            latest_view.version().unwrap(),
+            transaction_infos.len()
+        );
         while !to_run.as_ref().unwrap().is_empty() {
             // Execute transactions.
             let state_view = self.state_view(&latest_view)?;
             let txns = to_run.take().unwrap();
-            let (executed, to_discard, to_retry) =
-                ChunkOutput::by_transaction_execution::<V>(txns, state_view)?
-                    .apply_to_ledger(&latest_view)?;
+            let mut chunk_output = ChunkOutput::by_transaction_execution::<V>(txns, state_view)?;
+
+            for (idx, (write_set, events)) in txns_to_skip.iter() {
+                if *idx > offset {
+                    chunk_output.transaction_outputs[*idx - offset] = TransactionOutput::new(
+                        write_set.clone(),
+                        events.clone(),
+                        transaction_infos[*idx - offset].gas_used(),
+                        TransactionStatus::Keep(transaction_infos[idx - offset].status().clone()),
+                    );
+                }
+            }
+
+            let (executed, to_discard, to_retry) = chunk_output.apply_to_ledger(&latest_view)?;
 
             // Accumulate result and deal with retry
             ensure_no_discard(to_discard)?;
             let n = executed.to_commit.len();
+            offset += n;
             executed.ensure_transaction_infos_match(&transaction_infos[..n])?;
             transaction_infos.drain(..n);
 

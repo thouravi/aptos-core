@@ -27,6 +27,7 @@ pub struct ReplayVerifyCoordinator {
     restore_handler: RestoreHandler,
     start_version: Version,
     end_version: Version,
+    txns_to_skip: Vec<Version>,
 }
 
 impl ReplayVerifyCoordinator {
@@ -39,6 +40,7 @@ impl ReplayVerifyCoordinator {
         restore_handler: RestoreHandler,
         start_version: Version,
         end_version: Version,
+        txns_to_skip: Vec<Version>,
     ) -> Result<Self> {
         Ok(Self {
             storage,
@@ -49,6 +51,7 @@ impl ReplayVerifyCoordinator {
             restore_handler,
             start_version,
             end_version,
+            txns_to_skip,
         })
     }
 
@@ -128,6 +131,7 @@ impl ReplayVerifyCoordinator {
             txn_manifests,
             Some(replay_transactions_from_version), /* replay_from_version */
             None,                                   /* epoch_history */
+            self.txns_to_skip,
         )
         .run()
         .await?;

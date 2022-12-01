@@ -28,6 +28,7 @@ pub use error::Error;
 pub use executed_chunk::ExecutedChunk;
 pub use parsed_transaction_output::ParsedTransactionOutput;
 use scratchpad::{ProofRead, SparseMerkleTree};
+use std::collections::BTreeMap;
 
 mod error;
 mod executed_chunk;
@@ -122,6 +123,7 @@ pub trait TransactionReplayer: Send {
         &self,
         transactions: Vec<Transaction>,
         transaction_infos: Vec<TransactionInfo>,
+        txns_to_skip: BTreeMap<usize, (WriteSet, Vec<ContractEvent>)>,
     ) -> Result<()>;
 
     fn commit(&self) -> Result<Arc<ExecutedChunk>>;
