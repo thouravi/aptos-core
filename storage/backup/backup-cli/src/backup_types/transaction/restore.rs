@@ -449,6 +449,10 @@ impl TransactionRestoreBatchController {
         let replay_start = Instant::now();
         let db = DbReaderWriter::from_arc(Arc::clone(&restore_handler.aptosdb));
         let chunk_replayer = Arc::new(ChunkExecutor::<AptosVM>::new(db));
+        let begin_version = std::cmp::max(
+            first_version,
+            restore_handler.get_next_expected_transaction_version()?,
+        );
 
         let db_commit_stream = txns_to_execute_stream
             .try_chunks(BATCH_SIZE)
@@ -460,15 +464,23 @@ impl TransactionRestoreBatchController {
                 let (txns, txn_infos, write_sets, events): (Vec<_>, Vec<_>, Vec<_>, Vec<_>) =
                     chunk.into_iter().multiunzip();
                 let chunk_replayer = chunk_replayer.clone();
-                let begin_version = first_version + (idx * BATCH_SIZE) as u64;
+                let chunk_begin_version = begin_version + (idx * BATCH_SIZE) as u64;
                 let mut txns_to_skip_info = BTreeMap::new();
 
-                info!("{:?} {:?} {:?}", first_version, idx, self.txns_to_skip);
+                info!(
+                    "{:?} {:?} {:?} {:?}",
+                    begin_version,
+                    restore_handler
+                        .get_next_expected_transaction_version()
+                        .unwrap(),
+                    idx,
+                    self.txns_to_skip
+                );
                 for version in self
                     .txns_to_skip
-                    .range(begin_version..begin_version + chunk_len as u64)
+                    .range(chunk_begin_version..chunk_begin_version + chunk_len as u64)
                 {
-                    let idx = (*version - begin_version) as usize;
+                    let idx = (*version - chunk_begin_version) as usize;
                     txns_to_skip_info.insert(idx, (write_sets[idx].clone(), events[idx].clone()));
                 }
 
